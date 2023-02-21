@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Detail, PokemonDetail } from '../../../interface'
+import { Detail } from '../../../interface'
 import '../index.scss'
 
 
@@ -21,8 +21,7 @@ const PokemonList: React.FC<Props> = (props) => {
 
     useEffect(() => {
         setIsSelected(id === detail?.id);
-    }, [detail])
-
+    }, [detail, id])
     const closeDetail = () => {
         setDetail({ id: 0, isOpened: false })
     }
